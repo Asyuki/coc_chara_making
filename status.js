@@ -56,8 +56,9 @@ function status() {
 	var put_mp = document.getElementById("mp");
 	put_mp.innerHTML = mp;
 
-	var put_int_p = document.getElementById("int_p");
+/*	var put_int_p = document.getElementById("int_p");
 	put_int_p.innerHTML = int_p;
 	var put_edu_p = document.getElementById("edu_p");
 	put_edu_p.innerHTML = edu_p;
+	*/
 };
