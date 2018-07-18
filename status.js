@@ -1,8 +1,3 @@
-var str, con, pow, dex, app, siz, inte, edu;
-var san, lck, ide, kno, hp, mp;
-var edu_p, int_p;
-
-
 function status() {
 
 	str = Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1;
@@ -18,12 +13,18 @@ function status() {
 	san = pow * 5;
 	lck = pow * 5;
 	ide = inte * 5;
+	kno = edu * 5;
+	if (kno >= 100) {
+		kno = 99;
+	};
 	hp = Math.ceil((siz + con) / 2);
 	mp = pow;
 
 	edu_p = edu * 20;
 	int_p = inte * 10;
 
+	default_point[39] = kno;
+	default_point[0] = dex * 2;//回避と母国語初期値
 
 	var put_str = document.getElementById("str");
 	put_str.innerHTML = str;
@@ -48,6 +49,8 @@ function status() {
 	put_lck.innerHTML = lck;
 	var put_ide = document.getElementById("ide");
 	put_ide.innerHTML = ide;
+	var put_kno = document.getElementById("kno");
+	put_kno.innerHTML = kno;
 	var put_hp = document.getElementById("hp");
 	put_hp.innerHTML = hp;
 	var put_mp = document.getElementById("mp");

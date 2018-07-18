@@ -7,7 +7,12 @@
 </head>
 <body>
 	探索者作成<br>
-	<input type="button" value="作成" onclick="status();job_decision();point();"><br>
+	現代日本を想定しているので、農林業従事者、自衛官、以外の職業では、<br>職業技能として銃器を選択しないようになっています。<br>
+	ライフル以外は農林業従事者も取りません。<br>
+	スポーツとしてどの種類の銃まで使うのか詳しくないので、<br>
+	スポーツ選手は拡張武器として銃器系統の選択をしてください。<br>
+
+	<input type="button" value="作成" onclick="status();job_decision();/*int_decision();*/skil_decision();"><br>
 	STR&nbsp;&nbsp;<span id="str"></span>&nbsp;
 	CON&nbsp;&nbsp;<span id="con"></span>&nbsp;
 	POW&nbsp;<span id="pow"></span><br>
@@ -19,14 +24,18 @@
 	<br>
 	SAN&nbsp;&nbsp;<span id="san"></span>&nbsp;
 	幸運&nbsp;&nbsp;<span id="lck"></span>&nbsp;
-	アイデア&nbsp;&nbsp;<span id="ide"></span><br><br>
+	アイデア&nbsp;&nbsp;<span id="ide"></span>&nbsp;
+	知識&nbsp;<span id="kno"></span><br><br>
 	HP&nbsp;&nbsp;<span id="hp"></span>&nbsp;
 	MP&nbsp;&nbsp;<span id="mp"></span><br><br>
 	職業ポイント&nbsp;<span id="edu_p"></span>&nbsp;
 	興味ポイント&nbsp;<span id = "int_p"></span><br><br>
-	職業	&nbsp;<span id="job_name"></span>
+	職業	&nbsp;<span id="job_name"></span><br><br>
+	技能
+	<div id="skil"></div>
 	<script type="text/javascript" src="status.js"></script>
-	<script type="text/javascript" src="point.js"></script>
 	<script type="text/javascript" src="job.js"></script>
+	<script type="text/javascript" src="skil.js"></script>
+	<script type="text/javascript" src="var.js"></script>
 </body>	
 </html>
