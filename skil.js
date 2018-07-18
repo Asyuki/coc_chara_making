@@ -4,6 +4,12 @@ function skil_decision() {
 	var temp;
 	var control;
 
+	temp = Math.random() * 3
+
+	temp = Math.floor((int_p / 10) * temp);
+	edu_p += temp;
+	int_p -= temp;
+
 	control = 0;
 	//職業技能ポイント割り振り
 	while(edu_p > 0 && control < 300){
