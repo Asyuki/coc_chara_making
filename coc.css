@@ -1,0 +1,6 @@
+body {
+	min-width: 1024px;
+}
+.wrap {
+	overflow: hidden;
+}
