@@ -1020,21 +1020,4 @@ function job_decision() {
 			skil_point.push(default_point[58]);
 			break;
 	}
-
-	cnt = 8;
-	k = Math.floor((Math.random() * (inte / 4))) + 3;
-	k += 8;
-	k_cnt = k;
-	while(cnt < k){
-		i = Math.floor(Math.random() * skil.length);
-		skil_temp[cnt] = i;
-		skil_point[cnt] = default_point[i];
-		for(j = 0; j < cnt; j++){
-			if(skil_temp[j] == i){
-				cnt--;
-				j = cnt;
-			}
-		}
-		cnt++;
-	}
 }

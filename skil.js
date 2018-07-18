@@ -35,7 +35,7 @@ function skil_decision() {
 	control = 0;
 	//興味ポイント割り振り
 	while(int_p > 0 && control < 300){
-		for (var cnt3 = 8; cnt3 < k_cnt && int_p > 0; cnt3++) {
+		for (var cnt3 = 8; cnt3 < skil_size && int_p > 0; cnt3++) {
 			if (skil_point[cnt3] <= 80 && int_p > 0) {
 				temp = Math.floor(Math.random() * inte) + 1;
 				if (temp > int_p) {
