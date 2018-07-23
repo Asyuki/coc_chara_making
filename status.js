@@ -1,4 +1,5 @@
 function status() {
+	var db = ["-1d4", "なし", "1d4", "1d6"];
 
 	str = Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1;
 	con = Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1;
@@ -8,7 +9,6 @@ function status() {
 	siz = Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1 + 6;
 	inte = Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1 + 6;
 	edu = Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1 + 3;
-
 
 	san = pow * 5;
 	lck = pow * 5;
@@ -56,9 +56,21 @@ function status() {
 	var put_mp = document.getElementById("mp");
 	put_mp.innerHTML = mp;
 
-/*	var put_int_p = document.getElementById("int_p");
-	put_int_p.innerHTML = int_p;
-	var put_edu_p = document.getElementById("edu_p");
-	put_edu_p.innerHTML = edu_p;
-	*/
+	if (33 <= siz + str && siz + str <= 36)			//ダメージボーナス計算
+	{
+		var put_db = document.getElementById("db");
+		put_db.innerHTML = db[3];
+	}else if (25 <= siz + str && siz + str <= 32)
+	{
+		var put_db = document.getElementById("db");
+		put_db.innerHTML = db[2];
+	}else if (17 <= siz + str && siz + str <= 24)
+	{
+		var put_db = document.getElementById("db");
+		put_db.innerHTML = db[1];
+	}else if (13 <= siz + str && siz +str <= 16)
+	{
+		var put_db = document.getElementById("db");
+		put_db.innerHTML = db[0];
+	}
 };
