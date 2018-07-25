@@ -1,5 +1,4 @@
 function status() {
-	var age;
 	var db = ["-1d4", "なし", "1d4", "1d6"];
 
 	age = Math.floor(Math.random() * 100) + 1;
@@ -29,7 +28,7 @@ function status() {
 	default_point[0] = dex * 2;//回避と母国語初期値
 
 	var put_age = document.getElementById("age");
-	put_age = age;
+	put_age.innerHTML = age;
 
 	var put_str = document.getElementById("str");
 	put_str.innerHTML = str;

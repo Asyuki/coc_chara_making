@@ -1,3 +1,4 @@
+var age;
 var str, con, pow, dex, app, siz, inte, edu;
 var san, lck, ide, kno, hp, mp;
 var edu_p, int_p;
