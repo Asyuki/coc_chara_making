@@ -1,7 +1,10 @@
 function status() {
 	var db = ["-1d4", "なし", "1d4", "1d6"];
+	var age_edu;
+	var i;
+	var age_i;
 
-	age = Math.floor(Math.random() * 100) + 1;
+	age = Math.floor(Math.random() * 85) + 16;
 	str = Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1;
 	con = Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1;
 	pow = Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1;
@@ -21,6 +24,38 @@ function status() {
 	hp = Math.ceil((siz + con) / 2);
 	mp = pow;
 
+	age_edu = edu + 6;
+
+	//EDUによる最低年齢
+	if (age_edu > age) {
+		age = age_edu;
+	}
+	//年齢によるEDUの増加
+	i = 0;
+	while(age >= age_edu + i){
+		if (i != 0) {
+			edu++;
+			if (age >= 40) {
+				age_i = Math.floor(Math.random() * 4);
+				switch(age_i){
+					case 0:
+						str--;
+						break;
+					case 1:
+						con--;
+						break;
+					case 2:
+						dex--;
+						break;
+					case 3:
+						app--;
+						break;
+				}
+			}
+		}
+		i += 10;
+	}
+
 	edu_p = edu * 20;
 	int_p = inte * 10;
 
@@ -29,7 +64,6 @@ function status() {
 
 	var put_age = document.getElementById("age");
 	put_age.innerHTML = age;
-
 	var put_str = document.getElementById("str");
 	put_str.innerHTML = str;
 	var put_con = document.getElementById("con");
