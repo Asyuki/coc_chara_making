@@ -1,4 +1,5 @@
 function status() {
+	var age;
 	var db = ["-1d4", "なし", "1d4", "1d6"];
 	var age_edu;
 	var i;
