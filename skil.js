@@ -1,8 +1,11 @@
 function skil_decision() {
 
 	var i;
+	var max;
 	var temp;
 	var control;
+
+	max = 90;
 
 	temp = Math.random() * 3
 
@@ -15,24 +18,32 @@ function skil_decision() {
 	while(edu_p > 0 && control < 300){
 		for (var cnt2 = 0; cnt2 < 8; cnt2++) {
 			i = Math.floor(Math.random() * 8);
-			pointing_cnt[cnt2] =i;
+			pointing_cnt[cnt2] = i;
 			for (var cnt = 0; cnt < cnt2; cnt++) {
 				if (i == pointing_cnt[cnt]) {
 					i = Math.floor(Math.random() * 8);
 					cnt = 0;
 				}
 			}
+			if (skil_point[i] > 80) {
+				max = 90;
+			}
 
-			if (skil_point[i] <= 80 &&edu_p > 0) {
+			if (skil_point[i] <= max &&edu_p > 0) {
 				temp = Math.floor(Math.random() * edu) + 1;
 				if (temp > edu_p) {
 					temp = edu_p;
 				}
-				if (temp + skil_point[i] > 80) {
-					temp = 80 - skil_point[i];
+				if (temp + skil_point[i] > max) {
+					temp = max - skil_point[i];
 				}
 				skil_point[i] += temp;
 				edu_p -= temp;
+				if (skil_point[i] >= 80) {
+					if (i != 39) {
+						max = 80;
+					}
+				}
 			}	
 		}
 		control++;
