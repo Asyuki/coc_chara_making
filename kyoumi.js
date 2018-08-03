@@ -7,7 +7,11 @@ var j;
 	skil_size = Math.floor((Math.random() * (inte / 4))) + 3;
 	skil_size += 8;
 	while(cnt < skil_size){
-		i = Math.floor(Math.random() * skil.length);
+		if (kaihi_check == true) {			//回避をとらない
+			i = Math.floor(Math.random() * (skil.length - 1)) + 1;
+		}else{
+			i = Math.floor(Math.random() * skil.length);
+		}
 		skil_temp[cnt] = i;
 		skil_point[cnt] = default_point[i];
 		for(j = 0; j < cnt; j++){

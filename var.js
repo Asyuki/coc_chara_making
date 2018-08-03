@@ -22,3 +22,8 @@ var default_point = [0, 25, 25, 50, 10, 25, 1, 20, 15, 30, 15, 25, 30, 1, 15, 10
 	5, 5, 1, 5, 10, 1, 1, 5, 1, 1, 1, 1, 1, 10, 1, 5, 1, 20, 1, 0]	;
 
 var skil_size;				//興味技能も含めた最終的なスキルの種類
+
+var kaihi_check;
+
+var avoid_con;
+var avoid_con2;

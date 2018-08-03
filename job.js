@@ -415,12 +415,12 @@ function job_decision() {
 			skil_temp.push(36);
 			skil_temp.push(38);
 
-			skil_point.push(default_point[24]);
-			skil_point.push(default_point[12]);
-			skil_point.push(default_point[25]);
-			skil_point.push(default_point[26]);
-			skil_point.push(default_point[60]);
-			skil_point.push(default_point[33]);
+			skil_point.push(default_point[35]);
+			skil_point.push(default_point[16]);
+			skil_point.push(default_point[44]);
+			skil_point.push(default_point[47]);
+			skil_point.push(default_point[36]);
+			skil_point.push(default_point[38]);
 			
 			cnt = Math.floor((Math.random() * 2)) + 1;
 			if (cnt == 1){
@@ -476,7 +476,12 @@ function job_decision() {
 			break;
 			
 		case 13:										//スポーツ選手
+		if (kaihi_check == false) {
 			skil_temp.push(0);
+		}else {
+			skil_temp.push(0);
+			avoid_con = -1;
+		}
 			skil_temp.push(43);
 			skil_temp.push(20);
 			skil_temp.push(5);

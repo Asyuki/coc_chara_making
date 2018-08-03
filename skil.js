@@ -25,12 +25,15 @@ function skil_decision() {
 					cnt = 0;
 				}
 			}
-			if (skil_point[i] > 80) {
+			if (skil_point[i] > 80) {			//80以上なら90までいってよい
 				max = 90;
 			}
 
 			if (skil_point[i] <= max &&edu_p > 0) {
 				temp = Math.floor(Math.random() * edu) + 1;
+				if (avoid_con == -1　&& i == 0) {					//回避にふらない
+					temp = 0;
+				}
 				if (temp > edu_p) {
 					temp = edu_p;
 				}
@@ -39,7 +42,7 @@ function skil_decision() {
 				}
 				skil_point[i] += temp;
 				edu_p -= temp;
-				if (skil_point[i] >= 80) {
+				if (skil_point[i] >= 80) {		//80以上のがあれば他のは80まで
 					if (i != 39) {
 						max = 80;
 					}

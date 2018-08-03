@@ -5,6 +5,7 @@ function status() {
 	var i;
 	var age_i;
 
+
 	age = Math.floor(Math.random() * 85) + 16;
 	str = Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1;
 	con = Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1 + Math.floor((Math.random() * 6)) + 1;
@@ -62,6 +63,8 @@ function status() {
 
 	default_point[39] = kno;
 	default_point[0] = dex * 2;//回避と母国語初期値
+	avoid_con = 0;
+	kaihi_check = document.avoid.kaihi.checked;//回避にポイントを振らない
 
 	var put_age = document.getElementById("age");
 	put_age.innerHTML = age;
